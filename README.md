@@ -21,6 +21,8 @@ ChatGPT 使用教程、精选开源项目、AI 工具等可查看：[ChatGPT 中
 
 更多精彩提示词：[Prompt 飞书知识库](https://langgptai.feishu.cn/wiki/RXdbwRyASiShtDky381ciwFEnpe)
 
+> 🆕 2026 提示：本仓库的提示词对 GPT-5、Claude、DeepSeek-V4、Gemini 等当代模型通用。面向思考模型（DeepSeek-V4 / Claude 扩展思考 / GPT-5 推理模式）写提示时，重点是说清目标与验收标准、少用 few-shot、不必再写"一步一步思考"——详见 [DeepSeek V4 思考模式提示技巧](https://github.com/EmbraceAGI/awesome-chatgpt-zh/blob/main/docs/ChatGPT_prompts.md#deepseek-v4-思考模式提示技巧) 与 [awesome-deepseek-prompts](https://github.com/langgptai/awesome-deepseek-prompts)、[awesome-claude-prompts](https://github.com/langgptai/awesome-claude-prompts)。
+
 
 ## 目录
 - [Prompts 精选 🚀](#prompts-精选-)
@@ -33,6 +35,7 @@ ChatGPT 使用教程、精选开源项目、AI 工具等可查看：[ChatGPT 中
     - [Meta Prompt](#meta-prompt)
     - [Prompt 评分专家](#prompt-评分专家)
   - [通用超级 Prompt 🔥](#通用超级-prompt-)
+  - [AI 工作流诊断顾问](#ai-工作流诊断顾问)
   - [输出不完整时继续输出保持格式](#输出不完整时继续输出保持格式)
   - [Github Copilot Chat](#github-copilot-chat)
   - [个人专属学习导师](#个人专属学习导师)
@@ -1163,6 +1166,25 @@ GPT4食用。通用超级 prompt ，根据你想要的输出和你的反馈，�
 20.完成回答后，询问我是否需要进行任何修改。
 21.如果我同意，询问所需的更改，参考您之前的回答，根据要求进行调整，并生成新的提示。重复步骤15-20，直到我对提示感到满意。
 如果您完全理解您的任务，请回复：“今天我该如何帮助您，#Name？”
+```
+
+## AI 工作流诊断顾问
+
+适合内容创作者、课程老师、咨询顾问和小团队，把反复出现的 AI 任务（长文转小红书草稿、会议纪要整理、客户方案初稿、课程模块拆解等）沉淀成可复用的工作流。重点不是让 AI 直接产出内容，而是先把任务边界、输入字段、处理步骤、输出格式和质检标准固定下来，方便复用与迭代。（投稿自 [@Ronnie2025](https://github.com/Ronnie2025)，来源 [ai-workflow-prompts-zh](https://github.com/Ronnie2025/ai-workflow-prompts-zh)）
+
+```text
+我希望你担任 AI 工作流诊断顾问。我会提供一个反复出现的任务、已有素材、目标用户、输出格式和当前卡点。请先判断这个任务是否值得做成可复用工作流，然后按以下结构输出：
+
+1. 任务边界：这个工作流解决什么问题，不解决什么问题。
+2. 输入字段：每次使用前必须填写哪些信息。
+3. 处理步骤：AI 应该按什么顺序完成任务。
+4. 输出格式：最终结果用什么结构交付。
+5. 质检清单：用哪些标准检查结果是否可用。
+6. 迭代记录：下次如何根据反馈改进提示词。
+
+如果关键信息缺失，请先问不超过 5 个问题；如果信息足够，请直接输出工作流方案。不要编造我没有提供的事实。
+
+我的第一个任务是：[例如：每周把一篇长文整理成小红书图文草稿]
 ```
 
 ## 输出不完整时继续输出保持格式
